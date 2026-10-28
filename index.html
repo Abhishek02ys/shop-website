@@ -5,6 +5,597 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cattle Feed & Dairy Equipment</title>
+<link rel="icon" type="image/png" href="logo.png">
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,kn,hi',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+
+body{
+font-family: 'Segoe UI', sans-serif;
+margin:0;
+background:#f2f6f9;
+}
+
+header{
+background:linear-gradient(90deg,#1a237e,#2e7d32);
+color:white;
+padding:25px;
+text-align:center;
+}
+
+nav {
+    background: #174D38;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:18px;
+font-weight:600;
+font-size:16px;
+}
+
+nav a:hover{
+color:#a5d6a7;
+}
+
+.hero{
+background:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30') center/cover;
+height:380px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:36px;
+font-weight:bold;
+text-shadow:2px 2px 10px rgba(0,0,0,0.6);
+}
+
+section{
+padding:45px;
+margin:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #24543D;
+    margin-bottom: 15px;
+}
+.products{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+flex:1;
+min-width:250px;
+background:#f8fbff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.gallery-item{
+background:#f8fbff;
+border-radius:10px;
+padding:10px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
+
+.gallery-item img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.gallery-item p{
+margin-top:8px;
+font-size:14px;
+}
+
+footer{
+background:#1a237e;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+
+.site-header {
+    background: linear-gradient(110deg, #1e2a78, #246b45);
+    color: white;
+    padding: 30px 20px;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    text-align: left;
+}
+
+.brand-text h1 {
+    font-size: 38px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.brand-text p {
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .brand-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .brand-logo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .brand-text {
+        text-align: center;
+    }
+
+    .brand-text h1 {
+        font-size: 27px;
+    }
+
+    .brand-text p {
+        font-size: 15px;
+    }
+}
+.language-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 5%;
+    background: #f4f7f5;
+    border-bottom: 1px solid #dce5df;
+}
+
+.language-label {
+    color: #1e2a78;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Keep Google Translate compact */
+#google_translate_element {
+    display: inline-block;
+}
+
+.goog-te-gadget {
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 0 !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    font-size: 14px !important;
+    padding: 7px 10px;
+    border: 1px solid #cbd5d0;
+    border-radius: 6px;
+    background: white;
+    color: #26352c;
+    cursor: pointer;
+    margin: 0 !important;
+    max-width: 180px;
+}
+
+@media (max-width: 600px) {
+    .language-bar {
+        justify-content: center;
+    }
+}
+.gallery-item img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+/* Image enlargement overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(10, 20, 15, 0.90);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    color: white;
+    font-size: 38px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .lightbox img {
+        max-width: 96%;
+        max-height: 75vh;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 16px;
+    }
+}
+.language-selector {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#languageToggle {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#languageToggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.language-options {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    min-width: 135px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.language-options.show {
+    display: block;
+}
+
+.language-options button {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.language-options button:hover {
+    background: #eaf3ed;
+}
+
+.site-header {
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .language-selector {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="brand-container">
+        <img src="logo.png" alt="Shri Guheshwar Traders Logo"
+             class="brand-logo">
+
+        <div class="brand-text">
+            <h1>Shri Guheshwar Traders</h1>
+            <p>Cattle Feed Dealer &amp; Dairy Equipment Supplier</p>
+        </div>
+    </div>
+</header>
+
+
+
+<nav>
+<a href="#about">About Us</a>
+<a href="#products">Products</a>
+<a href="#gallery">Gallery</a>
+<a href="#dealership">Dealership</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="language-selector">
+    <button id="languageToggle" aria-label="Choose language" title="Choose language">
+        🌐
+    </button>
+
+    <div id="languageOptions" class="language-options">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('kn')">ಕನ್ನಡ</button>
+        <button onclick="changeLanguage('hi')">हिन्दी</button>
+    </div>
+</div>
+
+<div id="google_translate_element"
+     style="position:absolute; left:-9999px; top:0;">
+</div>
+<div class="hero">
+Supporting Farmers & Dairy Businesses
+</div>
+
+<section id="about">
+<h2>About Us</h2>
+<p>
+We are a trusted dealer of HNDUSTAN FEEDS and a wholesale supplier of dairy farming equipment. 
+Our mission is to support farmers with high-quality products that improve livestock health 
+and increase milk production.
+</p>
+
+<p>
+With years of experience in the dairy sector, we provide reliable feed and efficient 
+equipment that help farmers manage their dairy operations successfully.
+</p>
+</section>
+
+<section id="products">
+<h2>What We Trade</h2>
+
+<div class="products">
+
+<div class="card">
+<h3>Cattle Feed</h3>
+<ul>
+<li>Dairy cattle feed</li>
+<li>Nutritional feed pellets</li>
+<li>Mineral mixtures</li>
+<li>Livestock supplements</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Dairy Equipment</h3>
+<ul>
+<li>Milking machines</li>
+<li>Chaff cutters</li>
+<li>Fodder cutting machines</li>
+<li>Dairy farm tools</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Product Gallery</h2>
+
+<div class="gallery">
+
+
+<div class="gallery-item">
+    <img src="hf.jpg" alt="Hindustan cattle feed">
+    <p>Cattle feed for balanced livestock nutrition.</p>
+</div>
+
+<div class="gallery-item">
+    <img src="mm.jpg" alt="Dairy milking machine">
+    <p>Milking machines for efficient dairy operations.</p>
+</div>
+
+<div class="gallery-item">
+    <img src="cc.jpg" alt="Chaff cutter">
+    <p>Chaff cutters for convenient fodder preparation.</p>
+</div>
+
+
+
+
+
+</div>
+
+</section>
+
+<section id="dealership">
+
+<h2>Dealership</h2>
+
+<h3>Authorized Dealer of Hindustan Feeds</h3>
+
+<p>
+We are proud to be an authorized dealer of HINDUSTAN FEEDS, a trusted name in
+livestock nutrition and cattle feed manufacturing. Their scientifically
+formulated feed products help improve cattle health, digestion, and milk
+production for dairy farmers.
+</p>
+
+<h3>What We Provide</h3>
+
+<ul>
+<li>Genuine Hindustan cattle feed products</li>
+<li>Reliable product availability</li>
+<li>Wholesale supply for dairy farms</li>
+<li>Support in choosing the right cattle feed</li>
+</ul>
+
+<h3>Benefits for Farmers</h3>
+
+<ul>
+<li>Improved cattle health</li>
+<li>Higher milk yield</li>
+<li>Balanced livestock nutrition</li>
+<li>Trusted feed quality</li>
+</ul>
+
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p><b>Address:</b> Basaveshwar circle, Jamakhandi, TQ: Jamakhandi, DIST: Bagalkot, State: Karnataka, India</p>
+<p><b>Phone:</b> +91 95353 34342<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91 99005 58823</p>
+<p><b>Location:</b> 
+<a href="https://maps.app.goo.gl/Wb4cTRELGMfWx5dQ9" target="_blank">View on Google Maps</a>
+</p>
+<p><b>Business Hours:</b> Monday – Saturday (9 AM – 7 PM)</p>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Shri Guheshwar Traders. All Rights Reserved.</p>
+    <p>Authorized Dealer of Hindustan Feeds | Dairy Farming Equipment Wholesale</p>
+</footer>
+<div class="lightbox" id="imageLightbox" role="dialog"
+     aria-modal="true" aria-label="Enlarged product image">
+
+    <button class="lightbox-close" id="lightboxClose"
+            aria-label="Close enlarged image">&times;</button>
+
+    <img id="lightboxImage" src="" alt="Enlarged product">
+</div>
+<script>
+const lightbox = document.getElementById('imageLightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const closeButton = document.getElementById('lightboxClose');
+
+document.querySelectorAll('.gallery-item img').forEach(image => {
+    image.addEventListener('click', () => {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt || 'Enlarged product image';
+        lightbox.classList.add('active');
+        closeButton.focus();
+    });
+});
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightboxImage.src = '';
+}
+
+closeButton.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        closeLightbox();
+    }
+});
+</script>
+<script>
+const languageToggle = document.getElementById('languageToggle');
+const languageOptions = document.getElementById('languageOptions');
+
+languageToggle.addEventListener('click', function (event) {
+    event.stopPropagation();
+    languageOptions.classList.toggle('show');
+});
+
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.language-selector')) {
+        languageOptions.classList.remove('show');
+    }
+});
+
+function changeLanguage(language) {
+    const select = document.querySelector('.goog-te-combo');
+
+    if (!select) {
+        alert('Translator is still loading. Please try again.');
+        return;
+    }
+
+    select.value = language;
+    select.dispatchEvent(new Event('change'));
+
+    languageOptions.classList.remove('show');
+}
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cattle Feed & Dairy Equipment</title>
 
 <script>
 function googleTranslateElementInit() {
